@@ -12,6 +12,7 @@ body {
     background-color: var(--white);
     color: var(--black);
     font-family: 'Work Sans', sans-serif;
+    max-width: 1920px;
 }
 
 /* ON YOUR OWN
@@ -40,8 +41,14 @@ h1 {
     padding-left: .5rem;
 }
 
+h3 {
+    padding: .5rem 1rem;
+}
+
 main {
     display: flex;
+    margin-left: 15vw;
+    
 }
 
 .content {
@@ -58,6 +65,10 @@ form {
 form>p:first-of-type {
     background-color: var(--yellow);
     border-radius: 5px 5px 0 0;
+    color: var(--mid-grey);
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.2rem;
 }
 
 fieldset {
@@ -76,6 +87,8 @@ input, select {
     border: var(--dark-grey) solid 1px;
     border-radius: 5px;
     width: 100%;
+    padding: .2rem;
+    width: 95%;
 }
 
 #password-hint {
@@ -134,17 +147,28 @@ a {
 
     .row {
         display: block;
+        flex-direction: row;
         align-items: center;
+        justify-content: space-evenly;
     }
-
-    .row div {
-        display: block;
-    }    
+  
 }
 
 @media screen and (min-width: 820px){
     .site-title {
         margin-bottom: -8rem;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .row div {
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -153,6 +177,7 @@ a {
         background-image: none;
         height: auto;
         color: var(--black);
+        margin-bottom: 0;
     }
 
     body {
@@ -164,7 +189,6 @@ a {
 
     .flex-container div {
         flex-basis: 100%;
-        gap: 0 1rem;
     }
 
     .content {
