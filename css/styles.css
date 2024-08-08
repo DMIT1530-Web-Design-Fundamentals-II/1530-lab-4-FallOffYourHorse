@@ -14,8 +14,6 @@ body {
     font-family: 'Work Sans', sans-serif;
 }
 
-
-
 /* ON YOUR OWN
 
     Write a special media query that only applies to the two smallest screen sizes. In these layouts, the brand (the logo and name of the company should):
@@ -25,3 +23,164 @@ body {
     3. have a drop-shadow on the text
 
 */
+
+/* Utility classes */
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.site-title {
+    display: flex;
+}
+
+/*  */
+
+h1 {
+    padding-left: .5rem;
+}
+
+main {
+    display: flex;
+}
+
+.content {
+    max-width: 750px;
+}
+
+form {
+    width: 100%;
+    background-color: var(--mid-grey);
+    border: none;
+    border-radius: 5px;
+}
+
+form>p:first-of-type {
+    background-color: var(--yellow);
+    border-radius: 5px 5px 0 0;
+}
+
+fieldset {
+    padding: 2rem;
+    width: 80%;
+    margin: 0 auto;
+    border: none;
+}
+
+.site-title svg {
+    width: 25px;
+    height: 25px;
+}
+
+input, select {
+    border: var(--dark-grey) solid 1px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#password-hint {
+    font-size: .65rem;
+}
+
+#submit {
+    display: block;
+    width: 95%;
+    margin: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    color: var(--mid-grey);
+    background-color: var(--grey-blue);
+    padding: .25rem;
+}
+
+/* typography */
+h1 {
+    font-size: 1rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+form>p:last-of-type{
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+a {
+    color: var(--grey-blue);
+}
+
+
+/* Hover states */
+#submit:hover {
+    cursor: pointer;
+    background-color: var(--grey-blue-hover);
+}
+
+/* Media Queries */
+/* sizes 600px, 820px, 1350px */
+@media screen and (min-width: 600px){
+    .site-title {
+        background-image: url('../img/work-at-home-with-pets.webp');
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: contain;
+        color: var(--white);
+        height: 100vh;
+        margin-bottom: -19rem;
+    }
+
+    .row {
+        display: block;
+        align-items: center;
+    }
+
+    .row div {
+        display: block;
+    }    
+}
+
+@media screen and (min-width: 820px){
+    .site-title {
+        margin-bottom: -8rem;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    .site-title {
+        background-image: none;
+        height: auto;
+        color: var(--black);
+    }
+
+    body {
+        background-image: url('../img/work-at-home.webp');
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: contain;
+    }
+
+    .flex-container div {
+        flex-basis: 100%;
+        gap: 0 1rem;
+    }
+
+    .content {
+        background-color: var(--white);
+        margin: 3rem auto;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .row div {
+        display: flex;
+        flex-direction: column;
+    }
+}
